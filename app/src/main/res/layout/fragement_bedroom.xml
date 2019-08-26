@@ -1,41 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
-
-
-
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background">
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/bedroom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        android:fontFamily="verdana"
+        android:textColor="@color/colorWhite"
+        android:background="@color/design_default_color_primary"
         android:textSize="28sp"
         android:layout_margin="20dp"
         android:text="@string/menu_bedroom" />
 
+
+    <!--code for ac-->
+    <TextView
+        android:id="@+id/ac"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bedroom"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="-57dp"
+        android:layout_marginLeft="30dp"
+        android:layout_toLeftOf="@+id/on"
+        android:text="@string/label_ac"
+        android:textColor="@color/colorWhite"
+        android:textSize="29sp" />
+
+
     <Button
         android:id="@+id/on"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/bedroom"
-        android:layout_alignBottom="@id/bedroom"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="-81dp"
-        android:text="ON" />
+        android:layout_alignBottom="@+id/bedroom"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginRight="143dp"
+        android:layout_marginBottom="-64dp"
+        android:text="@string/button_on" />
+
+
+
 
     <Button
         android:id="@+id/off"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/on"
-        android:layout_alignBottom="@id/bedroom"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="32dp"
-        android:text="OFF" />
+        android:layout_alignBottom="@+id/bedroom"
+        android:layout_alignParentEnd="true"
 
-</LinearLayout>
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="-64dp"
+        android:text="@string/button_off" />
+
+
+</RelativeLayout>
